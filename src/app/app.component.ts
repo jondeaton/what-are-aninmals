@@ -30,7 +30,6 @@ const ANINMALS: Aninmal[] = [
       been discovered so far. Here is the most common ones that you can find:
     </p>
     
-    
     <h2>Common aninmals</h2>
     <ul class="aninmals">
       
@@ -44,6 +43,10 @@ const ANINMALS: Aninmal[] = [
         </li>
       
     </ul>
+
+    <div *ngIf="selectedAninmal">
+      <aninmal-detail [aninmal]="selectedAninmal"></aninmal-detail>
+    </div>
   `,
 
   styles: [`
@@ -101,11 +104,6 @@ export class AppComponent {
   title = 'What are aninmals?';
 
   selectedAninmal: Aninmal;
-
-  aninmal: Aninmal = {
-    id: 1,
-    name: 'pupper'
-  };
 
   onSelect(aninmal: Aninmal): void {
     this.selectedAninmal = aninmal;
