@@ -4,7 +4,8 @@ import { Aninmal } from './aninmal';
 @Component({
   selector: 'aninmal-detail',
   template: `
-      <h2>{{aninmal.name}} details!</h2>
+      <h2>Details: {{aninmal.name}}</h2>
+      <!--<h2>{{aninmal.name}} - details!</h2>-->
       <div><label>id: </label>{{aninmal.id}}</div>
       <div>
         <label>name: </label>

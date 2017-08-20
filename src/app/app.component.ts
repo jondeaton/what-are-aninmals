@@ -31,21 +31,38 @@ const ANINMALS: Aninmal[] = [
     </p>
     
     <h2>Common aninmals</h2>
-    <ul class="aninmals">
+    <div class="left">
+      <ul class="aninmals">
         <li *ngFor="let aninmal of aninmals"
             (click)="onSelect(aninmal)"
             [class.selected]="aninmal == selectedAninmal">
-          
+
           <span class="badge">{{aninmal.id}}</span> {{aninmal.name}}
         </li>
-    </ul>
+      </ul>
+    </div>
 
-    <div *ngIf="selectedAninmal">
+    <div *ngIf="selectedAninmal" class="right">
       <aninmal-detail [aninmal]="selectedAninmal"></aninmal-detail>
     </div>
   `,
 
   styles: [`
+    
+    .right {
+      float: left;
+      padding: 5px 5px;
+      display: inline-block;
+      background-color: #eee;
+      width: 500px;
+      height: 200px;
+      border-radius: 4px 0 0 4px;
+    }
+    
+    .left{
+      float: left
+    }
+    
   .selected {
     background-color: #CFD8DC !important;
     color: white;
