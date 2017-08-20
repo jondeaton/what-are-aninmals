@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-export class Aninmal {
-  id: number;
-  name: string;
-}
+import { Aninmal } from './aninmal';
 
 const ANINMALS: Aninmal[] = [
   { id: 1, name: 'flopwop' },
@@ -48,17 +44,6 @@ const ANINMALS: Aninmal[] = [
         </li>
       
     </ul>
-    
-    
-    <!--Detailed view-->
-    <div *ngIf="selectedAninmal">
-      <h2>{{selectedAninmal.name}} details!</h2>
-      <div><label>id: </label>{{selectedAninmal.id}}</div>
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="selectedAninmal.name" placeholder="name">
-      </div>
-    </div>
   `,
 
   styles: [`
