@@ -32,16 +32,12 @@ const ANINMALS: Aninmal[] = [
     
     <h2>Common aninmals</h2>
     <ul class="aninmals">
-      
         <li *ngFor="let aninmal of aninmals"
             (click)="onSelect(aninmal)"
-            [class.selected]="aninmal == selectedAninmal"
-            >
+            [class.selected]="aninmal == selectedAninmal">
           
           <span class="badge">{{aninmal.id}}</span> {{aninmal.name}}
-          
         </li>
-      
     </ul>
 
     <div *ngIf="selectedAninmal">

@@ -4,12 +4,11 @@ import { Aninmal } from './aninmal';
 @Component({
   selector: 'aninmal-detail',
   template: `
-    
-      <h2>{{selectedAninmal.name}} details!</h2>
-      <div><label>id: </label>{{selectedAninmal.id}}</div>
+      <h2>{{aninmal.name}} details!</h2>
+      <div><label>id: </label>{{aninmal.id}}</div>
       <div>
         <label>name: </label>
-        <input [(ngModel)]="selectedAninmal.name" placeholder="name">
+        <input [(ngModel)]="aninmal.name" placeholder="name">
       </div>
     
   `
