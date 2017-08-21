@@ -98,7 +98,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.getAninmals();
   }
-  
+
   selectedAninmal: Aninmal;
   aninmals: Aninmal[];
 

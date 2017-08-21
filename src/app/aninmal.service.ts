@@ -9,4 +9,10 @@ export class AninmalService {
     return Promise.resolve(ANINMALS);
   }
 
+  getAninmalsSlowly(): Promise<Aninmal[]> {
+    return new Promise(resolve => {
+      setTimeout(() => resolve(this.getAninmals()), 2000)
+    })
+  }
 }
+
