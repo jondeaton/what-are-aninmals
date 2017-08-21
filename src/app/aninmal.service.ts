@@ -5,8 +5,8 @@ import {ANINMALS} from "./mock-aninmals";
 @Injectable() // <-- emit metadata about the service
 export class AninmalService {
 
-  getAninmals(): Aninmal[] {
-    return ANINMALS;
+  getAninmals(): Promise<Aninmal[]> {
+    return Promise.resolve(ANINMALS);
   }
 
 }
