@@ -1,23 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Aninmal } from './aninmal';
-
-const ANINMALS: Aninmal[] = [
-  { id: 1, name: 'flopwop' },
-  { id: 2, name: 'slippery tube dude' },
-  { id: 3, name: 'fuckingf STUP1d idiot' },
-  { id: 4, name: 'common doggo' },
-  { id: 5, name: '✨special doggo✨' },
-  { id: 6, name: 'vengeance' },
-  { id: 7, name: 'water flippers'},
-  { id: 8, name: 'fregs'},
-  { id: 9, name: 'Snip snap doggers'},
-  { id: 10, name: 'woof Bork doggo'},
-  { id: 11, name: 'puppper'},
-  { id: 12, name: 'floof'},
-  { id: 13, name: 'flying flippity flap'},
-  { id: 14, name: 'shell house snip-snap'},
-  { id: 15, name: 'common blub blubs'}
-];
+import {AninmalService} from "./aninmal.service";
 
 @Component({
   selector: 'my-app',
@@ -26,29 +9,24 @@ const ANINMALS: Aninmal[] = [
     <p>
       If you have been around for a bit you might have heard of them before.
       But just WHAT exactly are aninmals? It's simple: aninmals are little people
-      just like you or me. Over <u>twenty</u> different types of aninmals have 
+      just like you or me. Over <u>twenty</u> different types of aninmals have
       been discovered so far. Here is the most common ones that you can find:
     </p>
-    
     <h2>Common aninmals</h2>
     <div class="left">
       <ul class="aninmals">
         <li *ngFor="let aninmal of aninmals"
             (click)="onSelect(aninmal)"
             [class.selected]="aninmal == selectedAninmal">
-
           <span class="badge">{{aninmal.id}}</span> {{aninmal.name}}
         </li>
       </ul>
     </div>
-
     <div *ngIf="selectedAninmal" class="right">
       <aninmal-detail [aninmal]="selectedAninmal"></aninmal-detail>
     </div>
   `,
-
   styles: [`
-    
     .right {
       float: left;
       padding: 5px 5px;
@@ -58,11 +36,9 @@ const ANINMALS: Aninmal[] = [
       height: 200px;
       border-radius: 4px 0 0 4px;
     }
-    
     .left{
       float: left
     }
-    
   .selected {
     background-color: #CFD8DC !important;
     color: white;
@@ -110,17 +86,27 @@ const ANINMALS: Aninmal[] = [
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`]
+`],
+  providers: [AninmalService] // <-- create fresh instance of AninmalService when creating the AppComponent
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'What are aninmals?';
 
+  constructor(private aninmalService: AninmalService) { }
+
+  ngOnInit(): void {
+    this.getAninmals();
+  }
+
   selectedAninmal: Aninmal;
+  aninmals: Aninmal[];
 
   onSelect(aninmal: Aninmal): void {
     this.selectedAninmal = aninmal;
   }
 
- aninmals = ANINMALS;
+  getAninmals(): void {
+    this.aninmals = this.aninmalService.getAninmals();
+  }
 }

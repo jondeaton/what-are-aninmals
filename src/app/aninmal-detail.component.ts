@@ -11,12 +11,10 @@ import { Aninmal } from './aninmal';
         <label>name: </label>
         <input [(ngModel)]="aninmal.name" placeholder="name">
       </div>
-    
   `
-
 })
 
 export class AninmalDetailComponent {
-  // Declare that hero is an input property
+  // Declare that aninmal is an input property
   @Input() aninmal: Aninmal;
 }
