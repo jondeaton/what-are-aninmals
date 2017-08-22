@@ -10,7 +10,15 @@ import {Component} from "@angular/core";
       just like you or me. Over <u>twenty</u> different types of aninmals have
       been discovered so far. Here is the most common ones that you can find:
     </p>
-    <my-aninmals></my-aninmals>`
+    <nav>
+      <a routerLink="/aninmals">Aninmals</a>
+      <router-outlet></router-outlet>
+    </nav>
+    <nav>
+      <a routerLink="/dashboard">Dashboard</a>
+      <router-outlet></router-outlet>
+    </nav>
+  `
 })
 
 export class AppComponent {
