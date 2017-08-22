@@ -2,7 +2,7 @@
 <div class="grid grid-pad">
   <div *ngFor="let aninmal of aninmals"
        class="col-1-4">
-    <div class="module aninmnal">
+    <div class="module aninmnal" (click)="onSelect(aninmal)">
       {{aninmal.name}}
       <!--<aninmal-detail [aninmal]="aninmal"></aninmal-detail>-->
     </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router} from "@angular/router";
 import {Aninmal} from "./aninmal";
 import {AninmalService} from "./aninmal.service";
 
@@ -12,7 +13,9 @@ export class DashboardComponent implements OnInit {
 
   aninmals: Aninmal[];
 
-  constructor(private aninmalService: AninmalService) {}
+  constructor(
+    private aninmalService: AninmalService,
+    private router: Router) {}
 
   ngOnInit(): void {
     this.aninmalService.getAninmals().then(
@@ -20,6 +23,6 @@ export class DashboardComponent implements OnInit {
   }
 
   onSelect(aninmal: Aninmal): void {
-
+    this.router.navigate(['/detail', aninmal.id]);
   }
 }
