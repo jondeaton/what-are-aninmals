@@ -32,6 +32,7 @@ import 'rxjs/add/operator/switchMap';
 })
 
 export class AninmalDetailComponent implements OnInit {
+
   // Declare that aninmal is an input property
   @Input() aninmal: Aninmal;
 

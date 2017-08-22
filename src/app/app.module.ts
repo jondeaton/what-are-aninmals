@@ -44,6 +44,6 @@ import {AninmalDetailComponent } from './aninmal-detail.component';
   ],
 
   bootstrap: [ AppComponent ],
-  providers: [AninmalService] // <-- create fresh instance of AninmalService when creating the AppComponent
+  providers: [ AninmalService ] // <-- create fresh instance of AninmalService when creating the AppComponent
 })
 export class AppModule { }

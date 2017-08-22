@@ -17,4 +17,8 @@ export class DashboardComponent implements OnInit {
     this.aninmalService.getAninmals().then(
       aninmals => this.aninmals = aninmals.slice(0, 4));
   }
+
+  onSelect(aninmal: Aninmal): void {
+
+  }
 }
