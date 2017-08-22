@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.aninmalService.getAninmals().then(
-      aninmals => this.aninmals = aninmals.slice(0, 4));
+      aninmals => this.aninmals = aninmals.slice(0, 6));
   }
 
   onSelect(aninmal: Aninmal): void {

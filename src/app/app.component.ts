@@ -13,8 +13,6 @@ import {Component} from "@angular/core";
     <nav>
       <a routerLink="/aninmals">Aninmals</a>
       <router-outlet></router-outlet>
-    </nav>
-    <nav>
       <a routerLink="/dashboard">Dashboard</a>
       <router-outlet></router-outlet>
     </nav>
