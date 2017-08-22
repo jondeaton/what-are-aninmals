@@ -45,6 +45,12 @@ export class AninmalsComponent implements OnInit {
       });
   }
 
-  delete(): void {}
+  delete(aninmal: Aninmal): void {
+    this.aninmalService.delete(aninmal.id)
+      .then(() => {
+        this.aninmals = this.aninmals.filter(a => a !== aninmal);
+        if (this.selectedAninmal === aninmal) {this.selectedAninmal = null;}
+      });
+  }
 
 }

@@ -44,7 +44,7 @@ export class AninmalDetailComponent implements OnInit {
 
   save(): void {
     this.aninmalService.update(this.aninmal)
-      .then(() => {});
+      .then(() => null );
   }
 
   goBack(): void {
