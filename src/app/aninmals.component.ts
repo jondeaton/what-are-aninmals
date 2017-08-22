@@ -23,6 +23,10 @@ export class AninmalsComponent implements OnInit {
     this.getAninmals();
   }
 
+  getAninmals(): void {
+    this.aninmalService.getAninmals().then( aninmals => this.aninmals = aninmals);
+  }
+
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedAninmal.id]);
   }
@@ -31,7 +35,16 @@ export class AninmalsComponent implements OnInit {
     this.selectedAninmal = aninmal;
   }
 
-  getAninmals(): void {
-    this.aninmalService.getAninmals().then( aninmals => this.aninmals = aninmals);
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return ; }
+    this.aninmalService.create(name)
+      .then( aninmal => {
+        this.aninmals.push(aninmal);
+        this.selectedAninmal = null;
+      });
   }
+
+  delete(): void {}
+
 }

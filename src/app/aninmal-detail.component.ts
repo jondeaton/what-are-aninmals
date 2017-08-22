@@ -15,6 +15,10 @@ import 'rxjs/add/operator/switchMap';
         <label>name: </label>
         <input [(ngModel)]="aninmal.name" placeholder="name">
       </div>
+      <nav>
+        <button (click)="save()">Save</button>
+        <button (click)="goBack()">Back</button>
+      </nav>
     </div>
   `,
   styleUrls: ['./aninmal-detail.component.css']
@@ -38,4 +42,12 @@ export class AninmalDetailComponent implements OnInit {
       .subscribe(aninmal => this.aninmal = aninmal);
   }
 
+  save(): void {
+    this.aninmalService.update(this.aninmal)
+      .then(() => {});
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 }

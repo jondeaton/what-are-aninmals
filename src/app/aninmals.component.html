@@ -5,8 +5,13 @@
         (click)="onSelect(aninmal)"
         [class.selected]="aninmal == selectedAninmal">
       <span class="badge">{{aninmal.id}}</span> {{aninmal.name}}
+      <button class="delete" (click)="delete()">X</button>
     </li>
   </ul>
+  <label>Aninmal name:</label> <input #aninmalName />
+  <button (click)="add(aninmalName.value); aninmalName.value=''">
+    Add
+  </button>
 </div>
 <div *ngIf="selectedAninmal">
   <aninmal-detail [aninmal]="selectedAninmal"></aninmal-detail>
