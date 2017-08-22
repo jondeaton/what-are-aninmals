@@ -5,7 +5,7 @@ import {AninmalService} from "./aninmal.service";
 @Component({
   selector: 'my-aninmals',
   template: `
-    <h2>Common aninmals</h2>
+    <h2>All aminals</h2>
     <div class="left">
       <ul class="aninmals">
         <li *ngFor="let aninmal of aninmals"
@@ -15,7 +15,7 @@ import {AninmalService} from "./aninmal.service";
         </li>
       </ul>
     </div>
-    <div *ngIf="selectedAninmal" class="right">
+    <div *ngIf="selectedAninmal">
       <aninmal-detail [aninmal]="selectedAninmal"></aninmal-detail>
     </div>
   `,
