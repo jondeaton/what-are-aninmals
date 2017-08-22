@@ -8,7 +8,7 @@ import 'rxjs/add/operator/switchMap';
 @Component({
   selector: 'aninmal-detail',
   template: `
-    <div class="detail">
+    <div>
       <h2>Details: {{aninmal.name}}</h2>
       <div><label>id: </label>{{aninmal.id}}</div>
       <div>
@@ -17,18 +17,7 @@ import 'rxjs/add/operator/switchMap';
       </div>
     </div>
   `,
-  styles: [`
-    .detail {
-      float: left;
-      padding: 10px 10px;
-      display: inline-block;
-      background-color: #eee;
-      border-radius: 10px 10px 10px 10px;
-      border: solid;
-      border-width: 1px;
-      margin: 10px
-    }
-  `]
+  styleUrls: ['./aninmal-detail.component.css']
 })
 
 export class AninmalDetailComponent implements OnInit {
