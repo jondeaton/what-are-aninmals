@@ -13,6 +13,8 @@ import {AninmalsComponent} from './aninmals.component';
 import {DashboardComponent} from './dashboard.component';
 import {AninmalDetailComponent } from './aninmal-detail.component';
 import {AppRoutingModule} from './app-routing.module';
+import {AninmalSearchService} from './aninmal-search.service';
+import {AninmalSearchComponent} from './aninmal-search.component';
 
 @NgModule({
   imports: [
@@ -30,6 +32,7 @@ import {AppRoutingModule} from './app-routing.module';
     AninmalsComponent,
     DashboardComponent,
     AninmalDetailComponent,
+    AninmalSearchComponent
   ],
 
   bootstrap: [ AppComponent ],
