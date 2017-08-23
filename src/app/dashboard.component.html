@@ -1,5 +1,6 @@
 <h2>Common Aninmals</h2>
 <div class="grid grid-pad">
+  <aninmal-search></aninmal-search>
   <div *ngFor="let aninmal of aninmals" [routerLink]="['/detail', aninmal.id]"
        class="col-1-4">
     <div class="module aninmnal" (click)="onSelect(aninmal)">
@@ -7,4 +8,3 @@
     </div>
   </div>
 </div>
-<aninmal-search></aninmal-search>

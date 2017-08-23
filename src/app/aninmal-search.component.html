@@ -3,7 +3,7 @@
   <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
   <div>
     <div *ngFor="let aninmal of aninmals | async"
-         (click)="gotoDetail(hero)" class="search-result" >
+         (click)="gotoDetail(aninmal)" class="search-result" >
       {{aninmal.name}}
     </div>
   </div>

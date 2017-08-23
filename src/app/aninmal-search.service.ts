@@ -12,7 +12,7 @@ export class AninmalSearchService {
 
   search(term: string): Observable<Aninmal[]> {
     return this.http
-      .get(`api/heroes/?name=${term}`)
+      .get(`api/aninmals/?name=${term}`)
       .map(response => response.json().data as Aninmal[]);
   }
 }

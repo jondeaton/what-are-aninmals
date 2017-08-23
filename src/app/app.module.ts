@@ -32,10 +32,9 @@ import {AninmalSearchComponent} from './aninmal-search.component';
     AninmalsComponent,
     DashboardComponent,
     AninmalDetailComponent,
-    AninmalSearchComponent
+    AninmalSearchComponent,
   ],
-
   bootstrap: [ AppComponent ],
-  providers: [ AninmalService ] // <-- create fresh instance of AninmalService when creating the AppComponent
+  providers: [ AninmalService, AninmalSearchService ] // <-- create fresh instances when creating the AppComponent
 })
 export class AppModule { }
