@@ -1,7 +1,7 @@
-import { Component, OnInit } from "@angular/core";
-import { Router} from "@angular/router";
-import {Aninmal} from "./aninmal";
-import {AninmalService} from "./aninmal.service";
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {Aninmal} from './aninmal';
+import {AninmalService} from './aninmal.service';
 
 @Component({
   selector: 'my-dashboard',

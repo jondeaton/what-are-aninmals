@@ -1,8 +1,8 @@
-import {Component} from "@angular/core";
+import {Component} from '@angular/core';
 
 @Component ({
   selector: 'my-app',
-  template:`
+  template: `
     <h1>{{title}}</h1>
     <p>
       If you have been around for a bit you might have heard of them before.

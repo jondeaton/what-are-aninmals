@@ -3,7 +3,6 @@ import {Headers, Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import {Aninmal} from './aninmal';
-import {toPromise} from "rxjs/operator/toPromise";
 
 @Injectable() // <-- emit metadata about the service
 export class AninmalService {
