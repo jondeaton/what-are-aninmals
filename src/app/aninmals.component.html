@@ -20,5 +20,7 @@
 </div>
 <div *ngIf="selectedAninmal">
   <aninmal-detail [aninmal]="selectedAninmal"></aninmal-detail>
-  <button (click)="gotoDetail()">View Details</button>
+  <div style="margin: 10px">
+    <button (click)="gotoDetail()">View Details</button>
+  </div>
 </div>
